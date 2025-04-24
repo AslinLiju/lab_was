@@ -1,0 +1,4 @@
+Capture the Network traffic using the command : dumpcap -i <interface> -w capture_file.pcap
+Use tshark to Analyse specific protocols. tshark -r capture_file.pcap -Y "ssl"
+http: testphp.vulnweb.com/login.php
+https: stealmylogin.com/demo
