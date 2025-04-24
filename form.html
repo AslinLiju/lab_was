@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body style="text-align: center;">
+    <h1>Login Form</h1>
+    <form class="ValidateForm" >
+        <label>Enter UserName:</label>
+        <input type="text" id="user"><br><br>
+        <label>Enter Password:</label>
+        <input type="password" id="pwd"><br><br>
+        <button onclick="validate()">Login</button>
+    </form>
+
+    <script>
+        function validate(){
+            const user=document.getElementById("user").value;
+            const pwd=document.getElementById("pwd").value;
+            if(user.length<20 || /[0-9]/.test(user))
+            {
+                window.alert("Wrong user name");
+                
+            }
+            else if ( pwd.length > 15 || !/[A-Za-z]/.test(pwd) || !/[0-9]/.test(pwd)){
+                window.alert("Wrong  password");
+               
+            }
+            else{
+                window.alert("Logged in successfully.");
+            }
+        }
+    </script>
+</body>
+</html>
